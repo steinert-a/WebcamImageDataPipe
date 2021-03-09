@@ -1,0 +1,8 @@
+# Visual Studio C++ / Qt
+.vs
+x64
+GeneratedFiles
+*.aps
+*.vcxproj.filters
+*.vcxproj.user
+

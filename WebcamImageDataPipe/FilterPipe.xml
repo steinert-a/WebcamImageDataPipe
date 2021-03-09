@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE XFILTERPIPE [
+  <!ELEMENT XFILTERPIPE (CONFIG,PIPE)>
+
+  <!ELEMENT CONFIG (OPTION*)>
+
+  <!ELEMENT PIPE (FILTER*)>
+  <!ELEMENT FILTER (OPTION*)>
+  <!ATTLIST FILTER
+    type  CDATA  #REQUIRED
+    id    ID     #REQUIRED
+    flag  CDATA  #IMPLIED>
+
+  <!ELEMENT OPTION EMPTY>
+  <!ATTLIST OPTION
+    name  CDATA  #REQUIRED
+    value CDATA  #REQUIRED>
+]>
+
+<XFILTERPIPE>
+  <CONFIG>
+    <OPTION name = "resolution" value = "200x300" />
+  </CONFIG>
+  <PIPE>
+    <FILTER type="GAUSSIAN_BLUR" id="GB0123" flag="0">
+      <OPTION name = "boardertype" value = "4" />
+    </FILTER>
+  </PIPE>
+</XFILTERPIPE>
